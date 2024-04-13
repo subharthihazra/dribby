@@ -2,13 +2,18 @@
 export default {
   content: ["./src/**/*.{html,js,ts,tsx,jsx}"],
   theme: {
-    colors: {
-      dribby: {
-        "primary-color": "#d97",
-        "secondary-color": "#fda",
+    extend: {
+      colors: {
+        dribby: {
+          "primary-color": "#ea4b8b",
+          "secondary-color": "#faeccf",
+        },
+      },
+      fontFamily: {
+        pacifico: ["Pacifico", "cursive"],
+        quicksand: ["Quicksand", "sans-serif"],
       },
     },
-    extend: {},
   },
   plugins: [],
 };
