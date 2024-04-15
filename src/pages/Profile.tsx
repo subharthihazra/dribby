@@ -95,28 +95,31 @@ function Form2() {
         className="flex flex-col gap-8"
         onSubmit={handleSubmit}
       >
-        <div className="flex gap-6 justify-center mt-24">
+        <div className="flex gap-6 justify-center flex-col sm:flex-row  mt-24">
           <CustomRadio
             name="cause"
             id="cause1"
             text={`I'm a designer looking to share my work`}
+            description={`If you're a designer eager to showcase your creations and gain exposure, this option is for you.`}
             src={cause_1}
           />
           <CustomRadio
             name="cause"
             id="cause2"
             text={`I'm looking to hire a designer`}
+            description={`If you're in search of talented designers to bring your ideas to life, select this option.`}
             src={cause_2}
           />
           <CustomRadio
             name="cause"
             id="cause3"
             text={`I'm looking for design inspiration`}
+            description={`If you're seeking fresh ideas and creative inspiration for your projects, choose this option.`}
             src={cause_3}
           />
         </div>
         <button
-          className="flex justify-center mx-auto w-52 py-2 px-4 border border-transparent rounded-md shadow-sm text-md font-medium bg-dribby-primary-color text-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-dribby-primary-color"
+          className="flex justify-center mx-auto w-52 py-2 px-4 mt-5 border border-transparent rounded-md shadow-sm text-md font-medium bg-dribby-primary-color text-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-dribby-primary-color"
           type="submit"
         >
           Finish
@@ -126,17 +129,20 @@ function Form2() {
   );
 }
 
-function CustomRadio({ id, name, text, src }: any) {
+function CustomRadio({ id, name, text, src, description }: any) {
   return (
-    <div className=" w-60 h-64 relative ">
-      <label className="block text-lg text-black font-bold" htmlFor={id}>
+    <div className=" w-60 h-64 relative">
+      <label className="" htmlFor={id}>
         <input type="radio" id={id} name={name} className="peer hidden" />
         <div className=" absolute top-0 w-full h-full border-[1px] border-[#00000055] rounded-lg peer-checked:border-dribby-primary-color peer-checked:border-2 transition-colors"></div>
         <div className="overflow-hidden m-3 h-36 flex rounded-lg peer-checked:translate-y-[-80px] transition-all">
           <img src={src} className="w-full h-full object-cover" alt="cause 1" />
         </div>
-        <div className="m-3 peer-checked:translate-y-[-80px] transition-all">
+        <div className="m-3 peer-checked:translate-y-[-80px] transition-all text-lg text-black font-bold">
           {text}
+        </div>
+        <div className="m-3 h-0 peer-checked:translate-y-[-80px] peer-checked:h-[80px] transition-all text-sm text-slate-700 overflow-hidden">
+          <div className="">{description}</div>
         </div>
       </label>
     </div>
