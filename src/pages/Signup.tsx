@@ -8,11 +8,13 @@ function Signup() {
     <div className=" h-full flex flex-col md:flex-row ">
       <div className="md:h-full md:w-1/3 bg-[#faeccf] flex flex-col p-6 gap-5">
         <HeaderLogo color="#6a530090" />
-        <div className=" text-3xl font-semibold text-[#6a5300]">
-          Welcome to the Ocean of Creative Folks.
-        </div>
-        <div className="">
-          <img src={signup_img}></img>
+        <div className="flex md:flex-col gap-5">
+          <div className=" w-3/4 md:w-full text-xl sm:text-3xl font-semibold text-[#6a5300] place-content-center">
+            Welcome to the Ocean of Creative Folks.
+          </div>
+          <div className=" w-1/4 md:w-full flex-1">
+            <img src={signup_img}></img>
+          </div>
         </div>
       </div>
       <div className="md:h-full md:w-2/3">
@@ -30,7 +32,7 @@ function SignupForm() {
   }
 
   return (
-    <div className="max-w-sm mx-auto p-4 h-full flex flex-col justify-center">
+    <div className="max-w-md mx-auto p-8 h-full flex flex-col justify-center">
       <h1 className="text-2xl font-semibold mb-4">Sign up to Dribbble</h1>
       <form method="POST" onSubmit={handleSubmit}>
         <div className="mb-4">
