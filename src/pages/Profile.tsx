@@ -95,7 +95,7 @@ function Form2() {
         className="flex flex-col gap-8"
         onSubmit={handleSubmit}
       >
-        <div className="flex gap-6 justify-center flex-col sm:flex-row  mt-24">
+        <div className="flex gap-6 justify-center flex-col md:flex-row md:mt-24">
           <CustomRadio
             name="cause"
             id="cause1"
@@ -131,17 +131,17 @@ function Form2() {
 
 function CustomRadio({ id, name, text, src, description }: any) {
   return (
-    <div className=" w-60 h-64 relative">
+    <div className=" w-60 md:h-64 relative place-self-center">
       <label className="" htmlFor={id}>
         <input type="radio" id={id} name={name} className="peer hidden" />
-        <div className=" absolute top-0 w-full h-full border-[1px] border-[#00000055] rounded-lg peer-checked:border-dribby-primary-color peer-checked:border-2 transition-colors"></div>
-        <div className="overflow-hidden m-3 h-36 flex rounded-lg peer-checked:translate-y-[-80px] transition-all">
+        <div className=" absolute bottom-0 w-full top-0 peer-checked:top-24 md:peer-checked:top-0 border-[1px] border-[#00000055] rounded-lg peer-checked:border-dribby-primary-color peer-checked:border-2 z-[-1] transition-all"></div>
+        <div className="overflow-hidden m-3 h-36 flex rounded-lg md:peer-checked:translate-y-[-80px] transition-all">
           <img src={src} className="w-full h-full object-cover" alt="cause 1" />
         </div>
-        <div className="m-3 peer-checked:translate-y-[-80px] transition-all text-lg text-black font-bold">
+        <div className="m-3 md:peer-checked:translate-y-[-80px] transition-all text-lg text-black font-bold">
           {text}
         </div>
-        <div className="m-3 h-0 peer-checked:translate-y-[-80px] peer-checked:h-[80px] transition-all text-sm text-slate-700 overflow-hidden">
+        <div className="m-3 h-0 md:peer-checked:translate-y-[-80px] peer-checked:h-[80px] transition-all text-md text-slate-700 overflow-hidden">
           <div className="">{description}</div>
         </div>
       </label>
@@ -151,7 +151,7 @@ function CustomRadio({ id, name, text, src, description }: any) {
 
 function PhotoSelect({ file, handleChange, name }: any) {
   return (
-    <div className="flex gap-8">
+    <div className="flex gap-8 flex-col sm:flex-row">
       <div>
         <img
           src={file || avatar}
