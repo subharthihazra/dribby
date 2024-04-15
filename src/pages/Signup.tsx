@@ -7,7 +7,9 @@ function Signup() {
   return (
     <div className=" h-full flex flex-col md:flex-row ">
       <div className="md:h-full md:w-1/3 bg-[#faeccf] flex flex-col p-6 gap-5">
-        <HeaderLogo color="#6a530090" />
+        <div className="font-pacifico text-2xl font-thin text-[#6a530090]">
+          Dribby
+        </div>
         <div className="flex md:flex-col gap-1 md:gap-5">
           <div className=" w-2/3 md:w-full text-xl sm:text-3xl font-semibold text-[#6a5300] place-content-center">
             Welcome to the Ocean of Creative Folks.

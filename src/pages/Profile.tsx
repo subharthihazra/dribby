@@ -11,7 +11,9 @@ function Profile() {
   return (
     <div className="flex flex-col h-full">
       <div className="m-4">
-        <HeaderLogo themeColor="dribby.primarycolor" />
+        <div className="font-pacifico text-2xl font-thin text-dribby-primarycolor">
+          Dribby
+        </div>
         {curform === 1 && <Form1 setCurform={setCurform} />}
         {curform === 2 && <Form2 />}
       </div>
