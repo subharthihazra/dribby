@@ -11,7 +11,7 @@ function Profile() {
   return (
     <div className="flex flex-col h-full">
       <div className="m-4">
-        <HeaderLogo themeColor="dribby-primary-color" />
+        <HeaderLogo themeColor="dribby.primarycolor" />
         {curform === 1 && <Form1 setCurform={setCurform} />}
         {curform === 2 && <Form2 />}
       </div>
@@ -66,7 +66,7 @@ function Form1({ setCurform }: any) {
         </div>
 
         <button
-          className="flex justify-center w-52 py-2 px-4 border border-transparent rounded-md shadow-sm text-md font-medium bg-dribby-primary-color text-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-dribby-primary-color"
+          className="flex justify-center w-52 py-2 px-4 border border-transparent rounded-md shadow-sm text-md font-medium bg-dribby-primarycolor text-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-dribby-primarycolor"
           type="submit"
           onClick={() => setCurform(2)}
         >
@@ -119,7 +119,7 @@ function Form2() {
           />
         </div>
         <button
-          className="flex justify-center mx-auto w-52 py-2 px-4 mt-5 border border-transparent rounded-md shadow-sm text-md font-medium bg-dribby-primary-color text-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-dribby-primary-color"
+          className="flex justify-center mx-auto w-52 py-2 px-4 mt-5 border border-transparent rounded-md shadow-sm text-md font-medium bg-dribby-primarycolor text-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-dribby-primarycolor"
           type="submit"
         >
           Finish
@@ -134,7 +134,7 @@ function CustomRadio({ id, name, text, src, description }: any) {
     <div className=" w-60 md:h-64 relative place-self-center">
       <label className="" htmlFor={id}>
         <input type="radio" id={id} name={name} className="peer hidden" />
-        <div className=" absolute bottom-0 w-full top-0 peer-checked:top-24 md:peer-checked:top-0 border-[1px] border-[#00000055] rounded-lg peer-checked:border-dribby-primary-color peer-checked:border-2 z-[-1] transition-all"></div>
+        <div className=" absolute bottom-0 w-full top-0 peer-checked:top-24 md:peer-checked:top-0 border-[1px] border-[#00000055] rounded-lg peer-checked:border-dribby-primarycolor peer-checked:border-2 z-[-1] transition-all"></div>
         <div className="overflow-hidden m-3 h-36 flex rounded-lg md:peer-checked:translate-y-[-80px] transition-all">
           <img src={src} className="w-full h-full object-cover" alt="cause 1" />
         </div>
@@ -192,7 +192,7 @@ function Input({
 }) {
   return (
     <input
-      className="mt-1 block w-full px-3 py-2 bg-white border border-slate-400 rounded-md shadow-sm focus:ring-2 focus:ring-offset-2 focus:ring-dribby-primary-color focus:border-slate-800 sm:text-md"
+      className="mt-1 block w-full px-3 py-2 bg-white border border-slate-400 rounded-md shadow-sm focus:ring-2 focus:ring-offset-2 focus:ring-dribby-primarycolor focus:border-slate-800 sm:text-md"
       id={id}
       placeholder={placeholder}
       type={type}

@@ -5,8 +5,8 @@ export default {
     extend: {
       colors: {
         dribby: {
-          "primary-color": "#ea4b8b",
-          "secondary-color": "#faeccf",
+          primarycolor: "#ea4b8b",
+          secondarycolor: "#faeccf",
         },
       },
       fontFamily: {

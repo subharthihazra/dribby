@@ -8,8 +8,9 @@ function HeaderLogo({
   return (
     <div
       className={` font-pacifico ${
-        themeColor ? `text-${themeColor}` : `text-[${color}]`
+        themeColor ? "text-red-500" : "text-[var(--pppp)]"
       } text-2xl font-thin`}
+      style={{ "--pppp": color }}
     >
       Dribby
     </div>

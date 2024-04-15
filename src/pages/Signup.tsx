@@ -109,7 +109,7 @@ function SignupForm() {
           </label>
         </div>
         <button
-          className="w-full flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-md font-medium bg-dribby-primary-color text-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-dribby-primary-color"
+          className="w-full flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-md font-medium bg-dribby-primarycolor text-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-dribby-primarycolor"
           type="submit"
         >
           Create Account
@@ -132,7 +132,7 @@ function Input({
 }) {
   return (
     <input
-      className="mt-1 block w-full px-3 py-2 bg-white border border-slate-400 rounded-md shadow-sm focus:ring-2 focus:ring-offset-2 focus:ring-dribby-primary-color focus:border-slate-800 sm:text-md"
+      className="mt-1 block w-full px-3 py-2 bg-white border border-slate-400 rounded-md shadow-sm focus:ring-2 focus:ring-offset-2 focus:ring-dribby-primarycolor focus:border-slate-800 sm:text-md"
       id={id}
       placeholder={placeholder}
       type={type}
