@@ -9,10 +9,10 @@ function Signup() {
       <div className="md:h-full md:w-1/3 bg-[#faeccf] flex flex-col p-6 gap-5">
         <HeaderLogo color="#6a530090" />
         <div className="flex md:flex-col gap-5">
-          <div className=" w-3/4 md:w-full text-xl sm:text-3xl font-semibold text-[#6a5300] place-content-center">
+          <div className=" w-2/3 md:w-full text-xl sm:text-3xl font-semibold text-[#6a5300] place-content-center">
             Welcome to the Ocean of Creative Folks.
           </div>
-          <div className=" w-1/4 md:w-full flex-1">
+          <div className=" w-1/3 md:w-full flex-1">
             <img src={signup_img}></img>
           </div>
         </div>
