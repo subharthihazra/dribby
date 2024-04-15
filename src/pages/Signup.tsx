@@ -1,7 +1,6 @@
 import React from "react";
 import signup_img from "../assets/signup_img.png";
 import { useNavigate } from "react-router-dom";
-import HeaderLogo from "../components/HeaderLogo";
 
 function Signup() {
   return (

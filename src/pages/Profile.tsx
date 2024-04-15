@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import avatar from "../assets/avatar.png";
-import HeaderLogo from "../components/HeaderLogo";
 import cause_1 from "../assets/cause_1.png";
 import cause_2 from "../assets/cause_2.png";
 import cause_3 from "../assets/cause_3.png";
