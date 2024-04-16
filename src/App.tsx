@@ -1,10 +1,15 @@
 import "./App.css";
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import {
+  createBrowserRouter,
+  Navigate,
+  RouterProvider,
+} from "react-router-dom";
 import Signup from "./pages/Signup";
 import Profile from "./pages/Profile";
 import VerifyEmail from "./pages/VerifyEmail";
 
 const router = createBrowserRouter([
+  { path: "/", element: <Navigate to="/signup" /> },
   {
     path: "/signup",
     element: <Signup />,
