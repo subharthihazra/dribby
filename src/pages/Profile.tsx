@@ -48,7 +48,7 @@ function Form1({ setCurform }: any) {
         className="flex flex-col gap-8"
         onSubmit={handleSubmit}
       >
-        <div className="mb-4">
+        <div className="mb-4 flex flex-col gap-4">
           <label
             className="block text-lg text-black font-bold mb-2"
             htmlFor="avatar"
@@ -171,7 +171,7 @@ function PhotoSelect({ file, handleChange, name }: any) {
       <div className="flex flex-col gap-3">
         <div>
           <label htmlFor={name} className=" cursor-pointer w-fit flex">
-            <div className="py-2 px-4 rounded-md text-sm font-semibold border-slate-500 border-2 bg-white text-black w-fit">
+            <div className="py-2 px-8 rounded-md text-sm font-semibold border-slate-500 border-2 bg-white text-black w-fit">
               Select Image
             </div>
           </label>
