@@ -19,7 +19,7 @@ function VerifyEmail() {
           {`Please verify your email address. We've sent a confirmation email to:`}
         </h2>
         <h1 className=" font-semibold text-black">{emailId}</h1>
-        <h2>{`Click the confirmation link in that email to begin using Dribbble.`}</h2>
+        <h2>{`Click the confirmation link in that email to begin using Dribby.`}</h2>
         <h2>
           {`Didn't receive the email? Check your Spam folder, it may have been caught by a filter. If
 you still don't see it, you can `}
