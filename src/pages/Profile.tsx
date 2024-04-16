@@ -3,6 +3,7 @@ import avatar from "../assets/avatar.png";
 import cause_1 from "../assets/cause_1.png";
 import cause_2 from "../assets/cause_2.png";
 import cause_3 from "../assets/cause_3.png";
+import { useNavigate } from "react-router-dom";
 
 function Profile() {
   const [curform, setCurform] = useState<number>(1);
@@ -79,6 +80,8 @@ function Form1({ setCurform }: any) {
 }
 
 function Form2() {
+  const navigate = useNavigate();
+
   function handleSubmit(e: React.SyntheticEvent) {
     e.preventDefault();
   }
@@ -98,33 +101,39 @@ function Form2() {
       >
         <div className="flex gap-6 justify-center flex-col md:flex-row md:mt-24">
           <CustomRadio
-            name="cause"
+            name="cause1"
             id="cause1"
             text={`I'm a designer looking to share my work`}
             description={`If you're a designer eager to showcase your creations and gain exposure, this option is for you.`}
             src={cause_1}
           />
           <CustomRadio
-            name="cause"
+            name="cause2"
             id="cause2"
             text={`I'm looking to hire a designer`}
             description={`If you're in search of talented designers to bring your ideas to life, select this option.`}
             src={cause_2}
           />
           <CustomRadio
-            name="cause"
+            name="cause3"
             id="cause3"
             text={`I'm looking for design inspiration`}
             description={`If you're seeking fresh ideas and creative inspiration for your projects, choose this option.`}
             src={cause_3}
           />
         </div>
-        <button
-          className="flex justify-center mx-auto w-52 py-2 px-4 mt-5 border border-transparent rounded-md shadow-sm text-md font-medium bg-dribby-primarycolor text-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-dribby-primarycolor"
-          type="submit"
-        >
-          Finish
-        </button>
+        <div className="mt-12">
+          <div className="font-bold">
+            Anything else? You can select multipile
+          </div>
+          <button
+            className="flex justify-center mx-auto w-52 py-2 px-4 mt-5 border border-transparent rounded-md shadow-sm text-md font-medium bg-dribby-primarycolor text-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-dribby-primarycolor"
+            type="submit"
+            onClick={() => navigate("/verifyemail")}
+          >
+            Finish
+          </button>
+        </div>
       </form>
     </div>
   );
@@ -134,7 +143,7 @@ function CustomRadio({ id, name, text, src, description }: any) {
   return (
     <div className=" w-60 md:h-64 relative place-self-center">
       <label className="" htmlFor={id}>
-        <input type="radio" id={id} name={name} className="peer hidden" />
+        <input type="checkbox" id={id} name={name} className="peer hidden" />
         <div className=" absolute bottom-0 w-full top-0 peer-checked:top-24 md:peer-checked:top-0 border-[1px] border-[#00000055] rounded-lg peer-checked:border-dribby-primarycolor peer-checked:border-2 z-[-1] transition-all"></div>
         <div className="overflow-hidden m-3 h-36 flex rounded-lg md:peer-checked:translate-y-[-80px] transition-all">
           <img src={src} className="w-full h-full object-cover" alt="cause 1" />
@@ -142,7 +151,7 @@ function CustomRadio({ id, name, text, src, description }: any) {
         <div className="m-3 md:peer-checked:translate-y-[-80px] transition-all text-lg text-black font-bold">
           {text}
         </div>
-        <div className="m-3 h-0 md:peer-checked:translate-y-[-80px] peer-checked:h-[80px] transition-all text-md text-slate-700 overflow-hidden">
+        <div className="m-3 h-0 md:peer-checked:translate-y-[-80px] peer-checked:h-[80px] transition-all text-sm text-slate-700 overflow-hidden">
           <div className="">{description}</div>
         </div>
       </label>
